@@ -1,0 +1,16 @@
+[
+{
+  "modid": "coolcraft",
+  "name": "Cool Craft",
+  "description": "Adds endgame armour that supports lots of mods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["callumbro"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
