@@ -2,13 +2,13 @@
 {
   "modid": "coolarmor",
   "name": "Cool Armor",
-  "description": "Adds endgame armour that uses items from other mods.",
+  "description": "Adds endgame armour that supports lots of mods.",
   "version": "${version}",
   "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
   "authorList": ["callumbro"],
-  "credits": "ProfessorDice for the textures.",
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
