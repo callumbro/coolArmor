@@ -1,9 +1,9 @@
-import common.*;
+package common;
+
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -12,11 +12,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-
-
-/**
- * Created by Callum on 02/27/2015.
- */
 
 @Mod(modid = "coolarmor", name = "Cool Armor", version = CoolArmor.version)
 
@@ -71,10 +66,10 @@ public class CoolArmor
             ItemStack quantumBoots = new ItemStack(GameData.getItemRegistry().getRaw("IC2:itemArmorQuantumBoots"), 1, 1);
             ItemStack mfsuStack = new ItemStack(GameData.getBlockRegistry().getRaw("IC2:blockElectric"), 1, 2);
 
-            GameRegistry.addRecipe(coolHelmet, new Object[]{"ABA", "BCB", "B B", Character.valueOf('A'), mfsuStack, Character.valueOf('B'), iridiumPlate, Character.valueOf('C'), quantumHelmet});
-            GameRegistry.addRecipe(coolChestplate, new Object[]{"ABA", "BCB", "B B", Character.valueOf('A'), mfsuStack, Character.valueOf('B'), iridiumPlate, Character.valueOf('C'), quantumChestplate});
-            GameRegistry.addRecipe(coolLeggings, new Object[]{"ABA", "BCB", "B B", Character.valueOf('A'), mfsuStack, Character.valueOf('B'), iridiumPlate, Character.valueOf('C'), quantumLeggings});
-            GameRegistry.addRecipe(coolBoots, new Object[]{"ABA", "BCB", "B B", Character.valueOf('A'), mfsuStack, Character.valueOf('B'), iridiumPlate, Character.valueOf('C'), quantumBoots});
+            GameRegistry.addRecipe(coolHelmet, "ABA", "BCB", "B B", 'A', mfsuStack, 'B', iridiumPlate, 'C', quantumHelmet);
+            GameRegistry.addRecipe(coolChestplate, "ABA", "BCB", "B B", 'A', mfsuStack, 'B', iridiumPlate, 'C', quantumChestplate);
+            GameRegistry.addRecipe(coolLeggings, "ABA", "BCB", "B B", 'A', mfsuStack, 'B', iridiumPlate, 'C', quantumLeggings);
+            GameRegistry.addRecipe(coolBoots, "ABA", "BCB", "B B", 'A', mfsuStack, 'B', iridiumPlate, 'C', quantumBoots);
         }
 
         ProjectELoaded = Loader.isModLoaded("ProjectE");
@@ -87,10 +82,10 @@ public class CoolArmor
             ItemStack KleinStar = new ItemStack((GameData.getItemRegistry().getRaw("ProjectE:item.pe_klein_star")), 1, 5);
             ItemStack darkMatter = new ItemStack((GameData.getItemRegistry().getRaw("ProjectE:item.pe_matter")), 1, 0);
 
-            GameRegistry.addRecipe(coolHelmet, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), darkMatter, Character.valueOf('B'), KleinStar, Character.valueOf('C'), gemHelmet});
-            GameRegistry.addRecipe(coolChestplate, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), darkMatter, Character.valueOf('B'), KleinStar, Character.valueOf('C'), gemChestplate});
-            GameRegistry.addRecipe(coolLeggings, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), darkMatter, Character.valueOf('B'), KleinStar, Character.valueOf('C'), gemLeggings});
-            GameRegistry.addRecipe(coolBoots, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), darkMatter, Character.valueOf('B'), KleinStar, Character.valueOf('C'), gemBoots});
+            GameRegistry.addRecipe(coolHelmet, "ABA", "ACA", "A A", 'A', darkMatter, 'B', KleinStar, 'C', gemHelmet);
+            GameRegistry.addRecipe(coolChestplate, "ABA", "ACA", "A A", 'A', darkMatter, 'B', KleinStar, 'C', gemChestplate);
+            GameRegistry.addRecipe(coolLeggings, "ABA", "ACA", "A A", 'A', darkMatter, 'B', KleinStar, 'C', gemLeggings);
+            GameRegistry.addRecipe(coolBoots, "ABA", "ACA", "A A", 'A', darkMatter, 'B', KleinStar, 'C', gemBoots);
         }
 
         TELoaded = Loader.isModLoaded("ThermalExpansion");
@@ -103,10 +98,10 @@ public class CoolArmor
             ItemStack ingotEnderium = new ItemStack((GameData.getItemRegistry().getRaw("ThermalFoundation:material")), 1, 76);
             ItemStack capEnderium = new ItemStack((GameData.getItemRegistry().getRaw("ThermalExpansion:capacitor")), 1, 5);
 
-            GameRegistry.addRecipe(coolHelmet, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), ingotEnderium, Character.valueOf('B'), capEnderium, Character.valueOf('C'), eleHelmet});
-            GameRegistry.addRecipe(coolChestplate, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), ingotEnderium, Character.valueOf('B'), capEnderium, Character.valueOf('C'), eleChestplate});
-            GameRegistry.addRecipe(coolLeggings, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), ingotEnderium, Character.valueOf('B'), capEnderium, Character.valueOf('C'), eleLeggings});
-            GameRegistry.addRecipe(coolBoots, new Object[]{"ABA", "ACA", "A A", Character.valueOf('A'), ingotEnderium, Character.valueOf('B'), capEnderium, Character.valueOf('C'), eleBoots});
+            GameRegistry.addRecipe(coolHelmet, "ABA", "ACA", "A A", 'A', ingotEnderium, 'B', capEnderium, 'C', eleHelmet);
+            GameRegistry.addRecipe(coolChestplate, "ABA", "ACA", "A A", 'A', ingotEnderium, 'B', capEnderium, 'C', eleChestplate);
+            GameRegistry.addRecipe(coolLeggings, "ABA", "ACA", "A A", 'A', ingotEnderium, 'B', capEnderium, 'C', eleLeggings);
+            GameRegistry.addRecipe(coolBoots, "ABA", "ACA", "A A", 'A', ingotEnderium, 'B', capEnderium, 'C', eleBoots);
         }
 
     }
@@ -116,6 +111,5 @@ public class CoolArmor
     {
 
     }
-
 
 }
