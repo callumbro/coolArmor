@@ -1,5 +1,6 @@
 package common;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -12,6 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = "coolarmor", name = "Cool Armor", version = CoolArmor.version)
 
@@ -104,6 +106,8 @@ public class CoolArmor
             GameRegistry.addRecipe(coolBoots, "ABA", "ACA", "A A", 'A', ingotEnderium, 'B', capEnderium, 'C', eleBoots);
         }
 
+        //register event
+        MinecraftForge.EVENT_BUS.register(new armorUpdateEvent());
     }
 
     @EventHandler
