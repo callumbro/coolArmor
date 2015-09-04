@@ -114,6 +114,27 @@ public class CoolArmor
     public void postInit(FMLPostInitializationEvent event)
     {
 
-    }
+        //load magical crops recipes, would not work properly in load()
+        if (Loader.isModLoaded("magicalcrops"))
+        {
+            //items for crafting
+            ItemStack blockDiamond = new ItemStack((GameData.getItemRegistry().getRaw("minecraft:diamond_block")), 1, 0);
+            ItemStack blockZivicio = new ItemStack((GameData.getItemRegistry().getRaw("magicalcrops:essence_storage")), 1, 4);
+            ItemStack zivicioHelmet = new ItemStack((GameData.getItemRegistry().getRaw("magicalcrops:magicalcrops_ZivicioArmourHelmet")), 1, 0);
+            ItemStack zivicioChestplate = new ItemStack((GameData.getItemRegistry().getRaw("magicalcrops:magicalcrops_ZivicioArmourChestplate")), 1, 0);
+            ItemStack zivicioLeggings = new ItemStack((GameData.getItemRegistry().getRaw("magicalcrops:magicalcrops_ZivicioArmourLeggings")), 1, 0);
+            ItemStack zivicioBoots = new ItemStack((GameData.getItemRegistry().getRaw("magicalcrops:magicalcrops_ZivicioArmourBoots")), 1, 0);
 
+            //my armor pieces
+            ItemStack coolHelmet = new ItemStack(itemCoolHelmet, 1, 0);
+            ItemStack coolChestplate = new ItemStack(itemCoolChestplate, 1, 0);
+            ItemStack coolLeggings = new ItemStack(itemCoolLeggings, 1, 0);
+            ItemStack coolBoots = new ItemStack(itemCoolBoots, 1, 0);
+
+            GameRegistry.addRecipe(coolHelmet, "ABA", "BCB", "   ", 'A', blockDiamond, 'B', blockZivicio, 'C', zivicioHelmet);
+            GameRegistry.addRecipe(coolChestplate, "A A", "BCB", "BBB", 'A', blockDiamond, 'B', blockZivicio, 'C', zivicioChestplate);
+            GameRegistry.addRecipe(coolLeggings, "BBB", "BCB", "A A", 'A', blockDiamond, 'B', blockZivicio, 'C', zivicioLeggings);
+            GameRegistry.addRecipe(coolBoots, "   ", "BCB", "A A", 'A', blockDiamond, 'B', blockZivicio, 'C', zivicioBoots);
+        }
+    }
 }
